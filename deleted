@@ -1,0 +1,13 @@
+pstat.name[p-ptable.proc][0]=p->name[0];
+    pstat.name[p-ptable.proc][1]=p->name[1];
+      pstat.name[p-ptable.proc][2]=p->name[2];
+  pstat.hticks[p-ptable.proc] = 0;
+  pstat.lticks[p-ptable.proc] = 0;
+  
+  int hticks[NPROC]; // the number of ticks each process has accumulated at HIGH priority
+	int lticks[NPROC]; // the number of ticks each process has accumulated at LOW priority
+	st->name[i][0]=pstat.name[i][0],
+        st->name[i][1]=pstat.name[i][1],
+            st->name[i][2]=pstat.name[i][2],
+    st->hticks[i] = pstat.hticks[i],
+    st->lticks[i] = pstat.lticks[i];
